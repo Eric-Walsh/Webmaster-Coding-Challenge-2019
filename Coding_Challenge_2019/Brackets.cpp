@@ -20,5 +20,16 @@ void Brackets::addBracket(string bracket){
     tempPair.second = NOT_CHECKED;
 }
 vector<Verdict> Brackets::getVerdict(){
-
+    vector<Verdict> verdictList;
+    bool testResult;
+    for(auto bracketPair: bracketList){
+        testResult = matchCheck(bracketPair.first);
+        if(testResult == true){
+            bracketPair.second = YES;
+        } else {
+            bracketPair.second = NO;
+        }
+        verdictList.push_back(bracketPair.second);
+    }
+    return verdictList;
 }
