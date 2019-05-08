@@ -19,7 +19,7 @@ class Brackets{
 
     private:
     int n;
-    vector<pair<string, Verdict>> bracketList;
+    vector<pair<string, Verdict> > bracketList;
     
 };
 

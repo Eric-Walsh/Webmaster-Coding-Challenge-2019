@@ -13,14 +13,20 @@ using namespace std;
 //Post: 0<= length <= 10^3
 bool sizeCheck(int length);
 
-//Checks if all the brackets in the string have matches
-//Pre: string length is between 0 and 10^3
-//Post: Returns true if all the brackets have matches
-bool matchCheck(string);
+//Checks that the contents of the string are all brackets
+//Pre: the size is between 0 and 1000
+//Post: returns true if the contents oof the string are all brackets, false if they are not.
+bool inputCheck(string input);
 
-//checks the brackets enclosed in other brackets
-//Pre: the string's first and last characters are brackets of the same type and the number of characters between them is greater than 0
-//Post: returns true if all the brackets inside the enclosing brackets have matches
-bool enclosedCheck(string);
+//Checks if all the brackets in the string are balanced
+//Pre: string length is between 0 and 10^3 and all characters are all brackets
+//Post: Returns true if all the brackets have matches
+bool balanceTest(string);
+
+
+//matches the front bracket with an end bracket
+//Pre: the first bracket is either {, [, or (
+//Post: the functions returns a matching bracket for the given front bracket;
+char bracketMatch(char frontBracket);
 
 #endif
