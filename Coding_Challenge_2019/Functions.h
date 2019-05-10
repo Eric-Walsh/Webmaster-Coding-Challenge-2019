@@ -9,6 +9,9 @@
 #include "Brackets.h"
 
 using namespace std;
+
+
+
 //Checks the size of length
 //Post: 0<= length <= 10^3
 bool sizeCheck(int length);
@@ -43,7 +46,16 @@ bool balanceCheck(string);
 //finds the indexes for the front and end brackets
 //Pre: each bracket has a air, the string is within the size limits, and the string only consisits of brackets
 //Post: places the found pairs into the vector of pairs
-void indexFinder(string input, int frontBracket, vector<pair<int, int> >& indexes);
+void indexFinder(string input, int& frontBracket, vector<pair<int, int> >& indexes);
+
+//checks if the character is a bracket
+//Post: returns true if the character is a {}, [], or () bracket
+bool isBracket(char);
+
+//checks if the character is an open bracket
+//Post: returns true if the character is a {, [, or ( bracket
+bool isOpenBracket(char input);
+
 
 
 
