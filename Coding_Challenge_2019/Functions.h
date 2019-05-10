@@ -42,8 +42,8 @@ bool balanceCheck(string);
 
 //finds the indexes for the front and end brackets
 //Pre: each bracket has a air, the string is within the size limits, and the string only consisits of brackets
-//Post: retruns a vector of pairs of the indexes, first is the index of the open bracket, second is the index of the close bracket
-vector<pair<int, int> > indexFinder(string, char);
+//Post: places the found pairs into the vector of pairs
+void indexFinder(string input, int frontBracket, vector<pair<int, int> >& indexes);
 
 
 
