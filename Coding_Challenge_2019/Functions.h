@@ -18,15 +18,33 @@ bool sizeCheck(int length);
 //Post: returns true if the contents oof the string are all brackets, false if they are not.
 bool inputCheck(string input);
 
-//Checks if all the brackets in the string are balanced
+//Checks if the string is balanced
 //Pre: string length is between 0 and 10^3 and all characters are all brackets
-//Post: Returns true if all the brackets have matches
+//Post: Returns true if all the test are passed
 bool balanceTest(string);
 
+//Checks if there are an equal number of open and close brackets
+//Pre: the string length is between 0 and 10^3 and all characters are all brackets 
+//Post: returns true if every opening bracket has a matching closing bracket
+bool matchCheck(string);
 
-//matches the front bracket with an end bracket
-//Pre: the first bracket is either {, [, or (
-//Post: the functions returns a matching bracket for the given front bracket;
-char bracketMatch(char frontBracket);
+//gets the close bracket that matches the given open bracket
+//Pre: the input is a only a bracket
+//Post: returns the matching close bracket
+char bracketMatcher(char openBracket);
+
+
+//Checks of each pair of brackets is balanced or its contents are balanced
+//Pre: Each bracket has a pair, the string is within the size limits, and the string only consists of brackets
+//Post: returns true if the string is balanced
+bool balanceCheck(string);
+
+
+//finds the indexes for the front and end brackets
+//Pre: each bracket has a air, the string is within the size limits, and the string only consisits of brackets
+//Post: retruns a vector of pairs of the indexes, first is the index of the open bracket, second is the index of the close bracket
+vector<pair<int, int> > indexFinder(string, char);
+
+
 
 #endif
